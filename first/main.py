@@ -1,28 +1,21 @@
-# Python program showing
-# file management using
-# context manager
+class Cat:
+    name = None
+    age = None
+    isHappy = None
 
-class FileManager():
-    def __init__(self, filename, mode):
-        self.filename = filename
-        self.mode = mode
-        self.file = None
+    def __init__(self, name={}, age=None, isHappy=None):
+        self.set_data(name, age, isHappy)
+        self.get_data()
 
-    def __enter__(self):
-        self.file = open(self.filename, self.mode)
-        return self.file
+    def set_data(self, name = None, age = None, isHappy = None):
+        self.name = name
+        self.age = age
+        self.isHappy = isHappy
 
-    def __exit__(self, exc_type, exc_value, exc_traceback):
-        self.file.close()
-
-
-# loading a file
-with FileManager('test.txt', 'w') as f:
-    f.write('Test1test')
-
-with FileManager('first/test.txt', 'w') as f:
-    f.write('123')
+    def get_data(self):
+        print(self.name, "age:", self.age, ". Happy:", self.isHappy)
 
 
-print(f.closed)
-print(type(f))
+cat1 = Cat()
+
+cat2 = Cat("Жопен", 2, False)

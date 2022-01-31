@@ -1,21 +1,7 @@
-class Cat:
-    name = None
-    age = None
-    isHappy = None
-
-    def __init__(self, name={}, age=None, isHappy=None):
-        self.set_data(name, age, isHappy)
-        self.get_data()
-
-    def set_data(self, name = None, age = None, isHappy = None):
-        self.name = name
-        self.age = age
-        self.isHappy = isHappy
-
-    def get_data(self):
-        print(self.name, "age:", self.age, ". Happy:", self.isHappy)
+from flask import Flask
 
 
-cat1 = Cat()
+app = Flask(__name__)
 
-cat2 = Cat("Жопен", 2, False)
+if __name__ == "__main__":
+    app.run(debug=True)

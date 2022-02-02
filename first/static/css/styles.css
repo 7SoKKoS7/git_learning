@@ -15,6 +15,10 @@ color: #CC0000;
 text-decoration: underline;
 }
 
+p {
+font-size: 16px;
+}
+
 .clear {clear: both;}
 
 ul.mainmenu {
@@ -51,7 +55,9 @@ dispLay: inline-block;
 min-width: 80px;
 }
 
-.form-contact p {margin: 10px 0 10px 0;}
+.form-contact p {
+    font-size: 16px;
+    margin: 10px 0 8px 0;}
 .form-contact input[type=submit], textarea { font-size: 16px;
 }
 
